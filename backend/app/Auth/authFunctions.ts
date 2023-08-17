@@ -7,7 +7,7 @@ const verifyOptions: VerifyOptions = { algorithms: ['HS256'] }
 
 const createToken = (payload: any): string => jwt.sign({ email: payload }, secret, jwtConfig)
 
-const getPayload = (token: any): Jwt | JwtPayload | string =>
+const getPayload = (token: string): Jwt | JwtPayload | string =>
   jwt.verify(token, secret, verifyOptions)
 
 export default { createToken, getPayload }
