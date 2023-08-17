@@ -12,6 +12,9 @@
     "rootDir": "./",
     "sourceMap": true,
     "paths": {
+      "Middleware/*": [
+        "./app/Middlewares"
+      ],
       "Routes/*": [
         "./app/start/routes"
       ],

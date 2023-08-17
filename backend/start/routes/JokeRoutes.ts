@@ -1,3 +1,3 @@
 import Route from '@ioc:Adonis/Core/Route'
 
-Route.get('/joke', 'JokeController.getJoke')
+Route.get('/joke', 'JokeController.getJoke').middleware('emailValidate')
