@@ -12,6 +12,9 @@
     "rootDir": "./",
     "sourceMap": true,
     "paths": {
+      "Routes/*": [
+        "./app/start/routes"
+      ],
       "App/*": [
         "./app/*"
       ],

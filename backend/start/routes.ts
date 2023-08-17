@@ -20,6 +20,7 @@
 
 import Route from '@ioc:Adonis/Core/Route'
 import './routes/UserRoutes'
+import './routes/JokeRoutes'
 
 Route.get('/', async () => {
   return { hello: 'world' }
