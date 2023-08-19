@@ -2,7 +2,6 @@
 import { getToken } from '../utils/localStorageFunctions';
 import { fetchJoke } from '../utils/fetchFunctions'
 import { useJokeStore } from '../stores/joke'
-import { storeToRefs } from 'pinia'
 import router from '../router';
 
 const getJoke = async () => {
@@ -13,8 +12,7 @@ const getJoke = async () => {
     const data = await response.json()
     if (response.status === 200) {
       jokeStore.joke = data.joke
-      return null
-      // return router.push('/poker-face')
+      return router.push('/poker-face')
     }
     throw new Error(response.status)
   } catch (error) {
