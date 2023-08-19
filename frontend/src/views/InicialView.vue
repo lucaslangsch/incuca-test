@@ -11,3 +11,11 @@ const initFLowJoke = async () => {
     <h1>Inicial</h1>
   </div>
 </template>
+
+<style scoped>
+  .inicial {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+  }
+</style>

@@ -14,6 +14,9 @@ const getJoke = async () => {
       jokeStore.joke = data.joke
       return router.push('/poker-face')
     }
+    if (response.status === 400) {
+      return router.push('/')
+    }
     throw new Error(response.status)
   } catch (error) {
     console.error(error)
@@ -22,7 +25,15 @@ const getJoke = async () => {
 </script>
 
 <template>
-  <div class="inicial" @click="getJoke">
+  <div class="sad" @click="getJoke">
     <h1>Triste</h1>
   </div>
 </template>
+
+<style scoped>
+  .sad {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+  }
+</style>

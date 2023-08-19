@@ -39,3 +39,11 @@ import { useJokeStore } from '../stores/joke'
     },    
   }
 </script>
+
+<style scoped>
+  .pokerFace {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+  }
+</style>

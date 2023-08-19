@@ -1,5 +1,5 @@
 <template>
-  <div class="pokerFace">
+  <div class="happy">
     <h1>Feliz</h1>
     <v-dialog
       v-model="dialog"
@@ -34,3 +34,11 @@ import { useJokeStore } from '../stores/joke'
     },
   }
 </script>
+
+<style scoped>
+  .happy {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+  }
+</style>
