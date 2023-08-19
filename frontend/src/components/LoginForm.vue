@@ -20,8 +20,9 @@
 </template>
 
 <script>
-import fetchFunctions from '../utils/fetchFunctions'
+import { fetchLogin } from '../utils/fetchFunctions'
 import router from '../router';
+import { saveToken } from '../utils/localStorageFunctions';
 export default {
   data() {
     return {
@@ -41,10 +42,11 @@ export default {
         password: this.password
       }
       try {
-        const response = await fetchFunctions.fetchLogin(formData)
+        const response = await fetchLogin(formData)
         const data = await response.json()
         if (response.status === 200) {
-          router.push('/inicial')
+          saveToken(data.token)
+          return router.push('/inicial')
         }
         this.errorLogin = data.message
         this.email = ''
