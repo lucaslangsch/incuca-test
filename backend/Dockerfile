@@ -8,7 +8,7 @@ COPY package*.json ./
 
 RUN apk add --no-cache git
 
-COPY . /home/node/app/
+COPY . .
 
 RUN chown -R node:node /home/node
 

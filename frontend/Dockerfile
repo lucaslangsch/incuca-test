@@ -10,6 +10,8 @@ RUN npm install vite
 
 RUN npm install
 
+RUN npm add vuetify
+
 COPY . ./
 
 EXPOSE 8080
