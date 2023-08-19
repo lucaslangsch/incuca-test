@@ -1,6 +1,6 @@
 <template>
   <div class="pokerFace">
-    <h1>Poker Face</h1>
+    <h1>Feliz</h1>
     <v-dialog
       v-model="dialog"
       width="auto"
@@ -10,12 +10,8 @@
       >
         <v-card-text>
           <h1>{{jokeS}}</h1>
-          <h3>Happiness Meter</h3>
-          <v-progress-linear
-            color="white"
-            v-model="value"
-          ></v-progress-linear>
         </v-card-text>
+        <v-btn color="blue" block @click="dialog = false">Close Dialog</v-btn>
       </v-card>
     </v-dialog>
   </div>
@@ -29,13 +25,12 @@ import { useJokeStore } from '../stores/joke'
       return {
         dialog: true,
         jokeS: useJokeStore().joke,
-        value: 0,
       }
     },
-
-    mounted() {
-      setTimeout(() => (this.dialog = false, router.push('/feliz')), 5000)
-      setInterval(() => {this.value += 0.5}, 25)
-    },    
+    watch: {
+        dialog() {
+        router.push('/inicial')
+      },
+    },
   }
 </script>
