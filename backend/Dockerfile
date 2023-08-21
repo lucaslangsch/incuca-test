@@ -22,8 +22,10 @@ ENV APP_KEY='DQR9XEhl0ftK4cKprTAyyOAbcO2O65qM'
 
 ENV DB_CONNECTION='sqlite'
 
+ENV PORT='3333'
+
 ENV HOST=0.0.0.0
 
 EXPOSE 3333
 
-CMD [ "node", "ace", "serve", "--watch" ]
+CMD [ "npm", "run", "dev" ]
